@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.input-pins-hit{
+  align-self: center;
+}
+input{
+  font-family: "Bitter", cursive;
+  height: 45px;
+  font-size: 15px;
+}
+.err{
+  font-family: "Bitter", cursive;
+  font-size: 15px;
+  margin: 1rem 2rem;
+  color: #8c8c8c;
+  align-self: center;
+}
+.restart {
+  width: 100px;
+  border-radius: 15px;
+  height: 35px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: red;
+  border-color: red;
+  background-color: transparent;
+  align-self: center;
+}
+
+.restart:hover {
+  background-color: red;
+  color: white;
+  opacity: 0.9;
+}
+
+button {
+  font-family: 'Bitter', cursive;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  background-color: #2790b0;
+  color: white;
+  outline: none;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: rgb(39 109 176 / 51%);
+  color: grey;
+}

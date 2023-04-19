@@ -1,0 +1,20 @@
+
+<div class='game'>
+	<app-score-card
+		[frames]="frames"
+	  	[cumulativeScores]="cumulativeScores"
+	  	[totalScore]="totalScore"
+	/>
+	<app-controls
+		[frames]="frames"
+		(addScore)="addScore($event)"
+		(restart)="restart()"
+		[gameOver]="gameOver"
+		[lastRoll]="pins.slice(-1)[0]"
+		[rolls]="rolls"
+	/>
+	<div *ngIf="gameOver" class='game-over-text'>
+		<h1>Game Over</h1>
+		<h2>You Scored: {{totalScore}}</h2>
+	</div>
+</div>

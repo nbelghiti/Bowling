@@ -1,0 +1,29 @@
+<div class='container'>
+	<div class="input-pins-hit">
+      	<input type="number" [(ngModel)]="myPinsHits" (keydown)="onInput()" (change)="onInput()"/>
+      	<button id='pin0'  (click)="handleClick(myPinsHits)" [disabled]="isEmpty()">roll</button>
+	</div>
+	<div class="err">
+		<button id='pin0' [disabled]="isValid(0)" (click)="handleClick(0)">0</button>
+		<button id='pin1' [disabled]="isValid(1)"  (click)="handleClick(1)">1</button>
+		<button id='pin2' [disabled]="isValid(2)"  (click)="handleClick(2)">2</button>
+		<button id='pin3' [disabled]="isValid(3)"  (click)="handleClick(3)">3</button>
+		<button id='pin4' [disabled]="isValid(4)"  (click)="handleClick(4)">4</button>
+		<button id='pin5' [disabled]="isValid(5)"  (click)="handleClick(5)">5</button>
+		<button id='pin6' [disabled]="isValid(6)"  (click)="handleClick(6)">6</button>
+		<button id='pin7' [disabled]="isValid(7)"  (click)="handleClick(7)">7</button>
+		<button id='pin8' [disabled]="isValid(8)"  (click)="handleClick(8)">8</button>
+		<button id='pin9' [disabled]="isValid(9)"  (click)="handleClick(9)">9</button>
+		<button id='pin10' [disabled]="isValid(10)"  (click)="handleClick(10)">10</button>
+	</div>
+	<div *ngIf='moreThanTen' class="err">
+		Well, unless you're using a grenade instead of a bowling ball I hate to break it to you, but hitting more than 10 pins in bowling is about as likely as finding a unicorn riding a rainbow.<br> But hey, keep swinging that ball and who knows, maybe you'll hit a strike... or maybe just hit the floor!
+	</div>
+	<div *ngIf='isNaNumber' class="err">
+		Sorry pal, but this isn't a game of Scrabble! In bowling, we only accept numbers, not strings of letters or special character. <br>So put down your dictionary and pick up a calculator if you want to score big!
+	</div>
+	<div *ngIf='negativNumber' class="err">
+		Well, you can't knock down negative pins, no matter how hard you try! In bowling, positivity is key - both in attitude and in the numbers you input. <br>So keep those negative vibes at bay and aim for the high score, my friend!
+	</div>
+  	<button *ngIf="rolls > 0" class="restart" (click)='handleRestart()'>Restart</button>
+</div>

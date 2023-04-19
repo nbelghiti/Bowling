@@ -1,0 +1,10 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-over-text {
+  text-align: center;
+  margin-top: 10px;
+}
